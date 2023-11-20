@@ -6,13 +6,13 @@
   
     <a  class="first-link" href="/home"><i class='bx bx-home-circle' ></i></a>
   
-    <a href="/users"  wire:navigate><i class='bx bx-user' ></i> </a>
-    <a href="/comunidades"  wire:navigate><i class='bx bx-compass' ></i></a>
+    <a href="/users" ><i class='bx bx-user' ></i> </a>
+    <a href="/comunidades"  ><i class='bx bx-compass' ></i></a>
    
-    <a href="/mensagens"  wire:navigate><i class='bx bxs-message-square'></i></a>
+    <a href="/mensagens"  ><i class='bx bxs-message-square'></i></a>
 
 
-    <a href="/notifications"  wire:navigate><i class='bx bx-bell' style='position: relative; font-size: 24px;'> <span class='notification-dot' style='
+    <a href="/notifications"  ><i class='bx bx-bell' style='position: relative; font-size: 24px;'> <span class='notification-dot' style='
         position: absolute;
         top: -10px;
         right: -10px;
