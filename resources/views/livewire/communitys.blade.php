@@ -42,7 +42,7 @@
                     </ul>
 
                 </div>
-
+      
                 <div class="profile-bio">
 
                     <p><span class="profile-real-name">Comunidades </span>são meios de interação essenciais para descobrir o  que você mais gosta!</p>
@@ -63,22 +63,29 @@
         
             <div class="gallery">
                 @foreach($communitys as $community)
-             <a href="/comunidades/{{ $community->id }}">
-                <div class="gallery-item" tabindex="0">
-                
-                    <img src="{{ asset('storage/' . $community->image )}}" class="gallery-image" alt="">
-             
-                    <div class="gallery-item-info">
-
+         
+                <div class="gallery-item" tabindex="0" style="position: relative;">
+                    <img src="{{ asset('storage/' . $community->image)}}" class="gallery-image">
+                    <div class="gallery-item-info" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                         <ul>
-                          
+                            @if ($community->users->contains(auth()->user()))
+                            <a href="/comunidades/{{ $community->id }}" wire:navigate    style="text-decoration: none;">
+                            <button style="margin: 5px;">Postar na Comunidade</button>
+                            </a>
+                        @else
+                            <button wire:click="participar({{ $community->id }})" wire:loading.attr="disabled" style="margin: 5px;">
+                                <span wire:loading wire:target="participar({{ $community->id }})">
+                                    Participando...
+                                </span>
+                                <span  wire:loading.remove wire:target="participar({{ $community->id }})">
+                                   Participar
+                                </span>
+                            </button>
+                        @endif
                         </ul>
-
                     </div>
-
                 </div>
-            </a>
-       
+        
                @endforeach
                
             </div>
