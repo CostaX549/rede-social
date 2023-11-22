@@ -70,10 +70,10 @@
                         <ul>
                             @if ($community->users->contains(auth()->user()))
                             <a href="/comunidades/{{ $community->id }}" wire:navigate    style="text-decoration: none;">
-                            <button style="margin: 5px;">Postar na Comunidade</button>
+                            <button style="margin: 5px; background-color: blue; cursor:pointer; border: none; border-radius: 5px;">Postar na Comunidade</button>
                             </a>
                         @else
-                            <button wire:click="participar({{ $community->id }})" wire:loading.attr="disabled" style="margin: 5px;">
+                            <button wire:click="participar({{ $community->id }})" wire:loading.attr="disabled" style="margin: 5px; background-color: blue; cursor:pointer; border: none; border-radius: 5px;">
                                 <span wire:loading wire:target="participar({{ $community->id }})">
                                     Participando...
                                 </span>
