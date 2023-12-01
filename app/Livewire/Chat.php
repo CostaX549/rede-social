@@ -52,7 +52,7 @@ class Chat extends Component
          $this->isMobile = $value;
      }
 
-     #[On('mensagem-atualizada')]
+ 
     public function loadMessages(int $friendId) {
      
         $this->authenticatedUserId = auth()->user()->id;
@@ -124,7 +124,7 @@ class Chat extends Component
 
   
 
-        $this->dispatch('mensagem-atualizada', friendId: $this->selectedFriendId );
+  
 
         $this->dispatch('message', title:'Mensagem enviada com sucesso.', type:'success');
 
