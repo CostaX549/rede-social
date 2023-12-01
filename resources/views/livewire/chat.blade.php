@@ -78,7 +78,7 @@
       </div>
      </div>
    
-     <div class="chat-area-main">
+     <div class="chat-area-main"  wire:poll="loadMessages({{ $selectedFriendId }})">
    
    
      
