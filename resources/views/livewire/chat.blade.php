@@ -87,7 +87,7 @@
       @forelse($messages as $message)
     
       @if($message->receiver_id == $authenticatedUserId)
-      <div class="chat-msg"  wire:poll="loadMessages({{ $selectedFriendId }})">
+      <div class="chat-msg">
      
        <div class="chat-msg-profile">
         <img class="chat-msg-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png" alt="" />
